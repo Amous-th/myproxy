@@ -30,7 +30,7 @@ public class MyClassLoader extends ClassLoader{
                         out.write(bytes, 0, len);
                     }
  
-                    return defineClass(className, out.toByteArray(), 0, out.size());
+                    return defineClass(className.replace("/","."), out.toByteArray(), 0, out.size());
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {

@@ -52,6 +52,7 @@ public class MyProxy {
         StringBuilder stringBuilder = new StringBuilder();
 
         StringBuilder interfaceNames = new StringBuilder();
+        stringBuilder.append("package ").append(MyProxy.class.getPackage().getName()) .append(";").append(ENTER);;
         for (Class clazz : interfaces) {
             stringBuilder.append("import ").append(clazz.getName())
                     .append(";").append(ENTER);
